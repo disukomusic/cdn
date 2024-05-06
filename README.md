@@ -8,6 +8,8 @@ https://www.jsdelivr.com/package/gh/disukomusic/cdn?tab=files
 
 https://disuko.neocities.org
 
+https://on3ko.lol
+
 https://disuko.gay
 
 https://rat.pics
