@@ -1,0 +1,126 @@
+/*-------------------------------------------*\
+    Window
+\*-------------------------------------------*/
+
+.window {
+    box-shadow: inset -1px -1px #33008C, inset 1px 1px #4709D9, inset -2px -2px #3300A1, inset 2px 2px #2F15ED,
+        inset -3px -3px #3300D9, inset 3px 3px #2509DE;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0 0 3px 0;
+    -webkit-font-smoothing: antialiased;
+}
+.title-bar {
+    font-family: "Trebuchet MS";
+    background: linear-gradient(
+        180deg,
+        rgb(71, 10, 255) 0%,
+        rgb(115, 0, 237) 8%,
+        rgb(119, 0, 237) 40%,
+        rgb(111, 0, 255) 88%,
+        rgb(111, 0, 255) 93%,
+        rgb(123, 0, 255) 95%,
+        rgb(118, 0, 214) 96%,
+        rgb(118, 0, 214) 100%
+    );
+    padding: 3px 5px 3px 3px;
+    border-top: 1px solid #4709D9;
+    border-left: 1px solid #4709D9;
+    border-right: 1px solid #3300A1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    font-size: 13px;
+    text-shadow: 1px 1px #4C0F8A;
+    height: 21px;
+}
+
+.title-bar-text {
+    padding-left: 3px;
+}
+
+.title-bar-controls {
+    display: flex;
+    button {
+        min-width: 21px;
+        min-height: 21px;
+        margin-left: 2px;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: none;
+        background-color: #7300ed;
+        transition: background 100ms;
+        border: none;
+        &:active,
+        &:hover,
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+    button[aria-label="Minimize"] {
+        background-image: svg-load("./icon/minimize.svg");     filter: saturate(0%);
+        &:hover {
+            background-image: svg-load("./icon/minimize-hover.svg");     filter: saturate(0%);
+        }
+        &:not(:disabled):active {
+            background-image: svg-load("./icon/minimize-active.svg");    filter: saturate(0%);
+        }
+    }
+    button[aria-label="Maximize"] {
+        background-image: svg-load("./icon/maximize.svg");    filter: saturate(0%);
+        &:hover {
+            background-image: svg-load("./icon/maximize-hover.svg");    filter: saturate(0%);
+        }
+        &:not(:disabled):active {
+            background-image: svg-load("./icon/maximize-active.svg");    filter: saturate(0%);
+        }
+    }
+    button[aria-label="Restore"] {
+        background-image: svg-load("./icon/restore.svg"); filter: saturate(0%);
+        &:hover {
+            background-image: svg-load("./icon/restore-hover.svg"); filter: saturate(0%);
+        }
+        &:not(:disabled):active {
+            background-image: svg-load("./icon/restore-active.svg");  filter: saturate(0%);
+        }
+    }
+    button[aria-label="Help"] {
+        background-image: svg-load("./icon/help.svg");  filter: saturate(0%);
+        &:hover {
+            background-image: svg-load("./icon/help-hover.svg");  filter: saturate(0%);
+        }
+        &:not(:disabled):active {
+            background-image: svg-load("./icon/help-active.svg"); filter: saturate(0%);
+        }
+    }
+    button[aria-label="Close"] {
+        background-image: svg-load("./icon/close.svg"); filter: hue-rotate(270deg);
+        &:hover {
+            background-image: svg-load("./icon/close-hover.svg"); filter: hue-rotate(270deg);
+        }
+        &:not(:disabled):active {
+            background-image: svg-load("./icon/close-active.svg");  filter: hue-rotate(270deg);
+        }
+    }
+}
+
+.status-bar {
+    margin: 0 3px;
+    box-shadow: inset 0px 1px 2px var(--button-shadow);
+    padding: 2px 1px;
+    gap: 0px;
+}
+
+.status-bar-field {
+    font-family: var(--sans-serif);
+    -webkit-font-smoothing: antialiased;
+    box-shadow: none;
+    padding: 1px 2px;
+    border-right: 1px solid rgba(208, 206, 191, 0.75);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    &:first-of-type{
+        border-left: none;
+    }
+    &:last-of-type {
+        border-right: none;
+    }
+}
